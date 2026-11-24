@@ -1,0 +1,29 @@
+{
+  "ClusterInfoList": [
+    {
+      "ClusterArn": "arn:aws:kafka:eu-west-1:111122223333:cluster/serverless-open/1a2b3c4d-1",
+      "ClusterName": "serverless-open",
+      "ClusterType": "SERVERLESS",
+      "State": "ACTIVE",
+      "Serverless": {
+        "VpcConfigs": [
+          {
+            "SubnetIds": [
+              "subnet-0a1private"
+            ]
+          }
+        ],
+        "ClientAuthentication": {
+          "Sasl": {
+            "Iam": {
+              "Enabled": false
+            }
+          },
+          "Unauthenticated": {
+            "Enabled": true
+          }
+        }
+      }
+    }
+  ]
+}

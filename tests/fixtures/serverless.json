@@ -1,0 +1,29 @@
+{
+  "ClusterInfoList": [
+    {
+      "ClusterArn": "arn:aws:kafka:eu-west-1:111122223333:cluster/serverless-events/1a2b3c4d-1",
+      "ClusterName": "serverless-events",
+      "ClusterType": "SERVERLESS",
+      "State": "ACTIVE",
+      "Serverless": {
+        "VpcConfigs": [
+          {
+            "SubnetIds": [
+              "subnet-0a1private"
+            ],
+            "SecurityGroupIds": [
+              "sg-0abcbrokers"
+            ]
+          }
+        ],
+        "ClientAuthentication": {
+          "Sasl": {
+            "Iam": {
+              "Enabled": true
+            }
+          }
+        }
+      }
+    }
+  ]
+}

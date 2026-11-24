@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Packaging
+/build/
+/dist/
+*.egg-info/
+
+# Virtualenvs
+/.venv/
+/venv/
+
+# Local AWS dumps — never commit a real account's cluster JSON
+/dump/
+/*.local.json
+
+# Fixtures and examples are part of the test suite.
+!tests/fixtures/**
+!examples/**

@@ -1,0 +1,275 @@
+{
+  "ClusterInfoList": [
+    {
+      "ClusterArn": "arn:aws:kafka:eu-west-1:111122223333:cluster/orders-prod/1a2b3c4d-1",
+      "ClusterName": "orders-prod",
+      "ClusterType": "PROVISIONED",
+      "State": "ACTIVE",
+      "CreationTime": "2024-03-11T09:14:02.511000+00:00",
+      "Provisioned": {
+        "NumberOfBrokerNodes": 3,
+        "EnhancedMonitoring": "PER_TOPIC_PER_PARTITION",
+        "AutoMinorVersionUpgrade": true,
+        "StorageMode": "LOCAL",
+        "CurrentBrokerSoftwareInfo": {
+          "KafkaVersion": "3.6.0"
+        },
+        "BrokerNodeGroupInfo": {
+          "InstanceType": "kafka.m5.large",
+          "BrokerAZDistribution": "DEFAULT",
+          "ClientSubnets": [
+            "subnet-0a1private",
+            "subnet-0b2private",
+            "subnet-0c3private"
+          ],
+          "SecurityGroups": [
+            "sg-0abcbrokers"
+          ],
+          "StorageInfo": {
+            "EbsStorageInfo": {
+              "VolumeSize": 1000
+            }
+          },
+          "ConnectivityInfo": {
+            "PublicAccess": {
+              "Type": "DISABLED"
+            }
+          }
+        },
+        "EncryptionInfo": {
+          "EncryptionAtRest": {
+            "DataVolumeKMSKeyId": "arn:aws:kms:eu-west-1:111122223333:key/9f8e7d6c-5b4a-3210-fedc-ba9876543210"
+          },
+          "EncryptionInTransit": {
+            "ClientBroker": "TLS",
+            "InCluster": true
+          }
+        },
+        "ClientAuthentication": {
+          "Sasl": {
+            "Iam": {
+              "Enabled": true
+            },
+            "Scram": {
+              "Enabled": false
+            }
+          },
+          "Tls": {
+            "Enabled": false,
+            "CertificateAuthorityArnList": []
+          },
+          "Unauthenticated": {
+            "Enabled": false
+          }
+        },
+        "LoggingInfo": {
+          "BrokerLogs": {
+            "CloudWatchLogs": {
+              "Enabled": true,
+              "LogGroup": "/aws/msk/orders-prod"
+            },
+            "Firehose": {
+              "Enabled": false
+            },
+            "S3": {
+              "Enabled": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "ClusterArn": "arn:aws:kafka:eu-west-1:111122223333:cluster/events-migrating/1a2b3c4d-1",
+      "ClusterName": "events-migrating",
+      "ClusterType": "PROVISIONED",
+      "State": "ACTIVE",
+      "CreationTime": "2024-03-11T09:14:02.511000+00:00",
+      "Provisioned": {
+        "NumberOfBrokerNodes": 3,
+        "EnhancedMonitoring": "PER_TOPIC_PER_PARTITION",
+        "AutoMinorVersionUpgrade": true,
+        "StorageMode": "LOCAL",
+        "CurrentBrokerSoftwareInfo": {
+          "KafkaVersion": "3.6.0"
+        },
+        "BrokerNodeGroupInfo": {
+          "InstanceType": "kafka.m5.large",
+          "BrokerAZDistribution": "DEFAULT",
+          "ClientSubnets": [
+            "subnet-0a1private",
+            "subnet-0b2private",
+            "subnet-0c3private"
+          ],
+          "SecurityGroups": [
+            "sg-0abcbrokers"
+          ],
+          "StorageInfo": {
+            "EbsStorageInfo": {
+              "VolumeSize": 1000
+            }
+          },
+          "ConnectivityInfo": {
+            "PublicAccess": {
+              "Type": "DISABLED"
+            }
+          }
+        },
+        "EncryptionInfo": {
+          "EncryptionAtRest": {
+            "DataVolumeKMSKeyId": "arn:aws:kms:eu-west-1:111122223333:key/9f8e7d6c-5b4a-3210-fedc-ba9876543210"
+          },
+          "EncryptionInTransit": {
+            "ClientBroker": "TLS_PLAINTEXT",
+            "InCluster": true
+          }
+        },
+        "ClientAuthentication": {
+          "Sasl": {
+            "Iam": {
+              "Enabled": true
+            },
+            "Scram": {
+              "Enabled": false
+            }
+          },
+          "Tls": {
+            "Enabled": false,
+            "CertificateAuthorityArnList": []
+          },
+          "Unauthenticated": {
+            "Enabled": false
+          }
+        },
+        "LoggingInfo": {
+          "BrokerLogs": {
+            "CloudWatchLogs": {
+              "Enabled": true,
+              "LogGroup": "/aws/msk/events-migrating"
+            },
+            "Firehose": {
+              "Enabled": false
+            },
+            "S3": {
+              "Enabled": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "ClusterArn": "arn:aws:kafka:eu-west-1:111122223333:cluster/legacy-ingest/1a2b3c4d-1",
+      "ClusterName": "legacy-ingest",
+      "ClusterType": "PROVISIONED",
+      "State": "ACTIVE",
+      "CreationTime": "2024-03-11T09:14:02.511000+00:00",
+      "Provisioned": {
+        "NumberOfBrokerNodes": 3,
+        "EnhancedMonitoring": "DEFAULT",
+        "AutoMinorVersionUpgrade": false,
+        "StorageMode": "LOCAL",
+        "CurrentBrokerSoftwareInfo": {
+          "KafkaVersion": "2.8.1"
+        },
+        "BrokerNodeGroupInfo": {
+          "InstanceType": "kafka.m5.large",
+          "BrokerAZDistribution": "DEFAULT",
+          "ClientSubnets": [
+            "subnet-0a1private"
+          ],
+          "SecurityGroups": [
+            "sg-0abcbrokers"
+          ],
+          "StorageInfo": {
+            "EbsStorageInfo": {
+              "VolumeSize": 1000
+            }
+          },
+          "ConnectivityInfo": {
+            "PublicAccess": {
+              "Type": "SERVICE_PROVIDED_EIPS"
+            }
+          }
+        },
+        "EncryptionInfo": {
+          "EncryptionAtRest": {
+            "DataVolumeKMSKeyId": "alias/aws/kafka"
+          },
+          "EncryptionInTransit": {
+            "ClientBroker": "TLS_PLAINTEXT",
+            "InCluster": false
+          }
+        },
+        "ClientAuthentication": {
+          "Sasl": {
+            "Iam": {
+              "Enabled": false
+            },
+            "Scram": {
+              "Enabled": false
+            }
+          },
+          "Tls": {
+            "Enabled": false,
+            "CertificateAuthorityArnList": []
+          },
+          "Unauthenticated": {
+            "Enabled": true
+          }
+        },
+        "LoggingInfo": {
+          "BrokerLogs": {
+            "CloudWatchLogs": {
+              "Enabled": false,
+              "LogGroup": "/aws/msk/legacy-ingest"
+            },
+            "Firehose": {
+              "Enabled": false
+            },
+            "S3": {
+              "Enabled": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "ClusterArn": "arn:aws:kafka:eu-west-1:111122223333:cluster/serverless-events/1a2b3c4d-1",
+      "ClusterName": "serverless-events",
+      "ClusterType": "SERVERLESS",
+      "State": "ACTIVE",
+      "Serverless": {
+        "VpcConfigs": [
+          {
+            "SubnetIds": [
+              "subnet-0a1private",
+              "subnet-0b2private"
+            ]
+          }
+        ],
+        "ClientAuthentication": {
+          "Sasl": {
+            "Iam": {
+              "Enabled": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "ScalableTargets": [
+    {
+      "ServiceNamespace": "kafka",
+      "ResourceId": "arn:aws:kafka:eu-west-1:111122223333:cluster/orders-prod/1a2b3c4d-1",
+      "ScalableDimension": "kafka:broker-storage:VolumeSize",
+      "MinCapacity": 1000,
+      "MaxCapacity": 4000
+    },
+    {
+      "ServiceNamespace": "kafka",
+      "ResourceId": "arn:aws:kafka:eu-west-1:111122223333:cluster/events-migrating/1a2b3c4d-1",
+      "ScalableDimension": "kafka:broker-storage:VolumeSize",
+      "MinCapacity": 1000,
+      "MaxCapacity": 4000
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "ClusterInfoList": [
+    {
+      "ClusterArn": "arn:aws:kafka:us-east-1:111122223333:cluster/us-orders/1a2b3c4d-1",
+      "ClusterName": "us-orders",
+      "ClusterType": "PROVISIONED",
+      "State": "ACTIVE",
+      "CreationTime": "2024-03-11T09:14:02.511000+00:00",
+      "Provisioned": {
+        "NumberOfBrokerNodes": 3,
+        "EnhancedMonitoring": "PER_TOPIC_PER_PARTITION",
+        "AutoMinorVersionUpgrade": true,
+        "StorageMode": "LOCAL",
+        "CurrentBrokerSoftwareInfo": {
+          "KafkaVersion": "3.4.0"
+        },
+        "BrokerNodeGroupInfo": {
+          "InstanceType": "kafka.m5.large",
+          "BrokerAZDistribution": "DEFAULT",
+          "ClientSubnets": [
+            "subnet-0a1private",
+            "subnet-0b2private",
+            "subnet-0c3private"
+          ],
+          "SecurityGroups": [
+            "sg-0abcbrokers"
+          ],
+          "StorageInfo": {
+            "EbsStorageInfo": {
+              "VolumeSize": 1000
+            }
+          },
+          "ConnectivityInfo": {
+            "PublicAccess": {
+              "Type": "DISABLED"
+            }
+          }
+        },
+        "EncryptionInfo": {
+          "EncryptionAtRest": {
+            "DataVolumeKMSKeyId": "arn:aws:kms:us-east-1:111122223333:key/9f8e7d6c-5b4a-3210-fedc-ba9876543210"
+          },
+          "EncryptionInTransit": {
+            "ClientBroker": "TLS",
+            "InCluster": true
+          }
+        },
+        "ClientAuthentication": {
+          "Sasl": {
+            "Iam": {
+              "Enabled": true
+            },
+            "Scram": {
+              "Enabled": false
+            }
+          },
+          "Tls": {
+            "Enabled": false,
+            "CertificateAuthorityArnList": []
+          },
+          "Unauthenticated": {
+            "Enabled": false
+          }
+        },
+        "LoggingInfo": {
+          "BrokerLogs": {
+            "CloudWatchLogs": {
+              "Enabled": true,
+              "LogGroup": "/aws/msk/us-orders"
+            },
+            "Firehose": {
+              "Enabled": false
+            },
+            "S3": {
+              "Enabled": false
+            }
+          }
+        }
+      }
+    }
+  ],
+  "ScalableTargets": [
+    {
+      "ServiceNamespace": "kafka",
+      "ResourceId": "arn:aws:kafka:us-east-1:111122223333:cluster/us-orders/1a2b3c4d-1",
+      "ScalableDimension": "kafka:broker-storage:VolumeSize",
+      "MinCapacity": 1000,
+      "MaxCapacity": 4000
+    }
+  ]
+}
